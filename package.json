@@ -1,14 +1,18 @@
 {
   "name": "static-site",
+  // "name": "09-readme-generator",
   "version": "1.0.0",
   "description": "",
+  // "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  // "author": "Michelle McConville",
   "license": "ISC",
+  // "license": "MIT",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"  // Does this need to be updated to most current version of 7.3.3?
   }
 }
