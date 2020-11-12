@@ -7,7 +7,7 @@ const questions = [
   {
     message: "Enter the name of the Repo/Project?",
     type: "input",
-    name: "name",
+    name: "project",
   },
   {
     message: "What is the link to your application?",
@@ -57,7 +57,8 @@ const questions = [
   {
     message: "Choose the license that applies to the Repo/Project?",
     type: "list",
-    name: ["MIT", "Apache" "ISC", "GNU", "None"],
+    name: "license",
+    choices: ["Apache", "GNU", "ISC", "MIT", "None"],
   },
   {
     message: "What is the copyright year?",
@@ -69,8 +70,25 @@ const questions = [
 //     type: "",
 //     name: "",
 //   },
-
 ];
+
+switch (data.license) {
+  case "Apache":
+    license = `[![License: Apache]()]`
+    break;
+  case "GNU":
+    license = `[![License: GNU]()]`
+    break;
+  case "ISC":
+    license = `[![License: ISC]()]`
+    break;
+  case "MIT":
+    license = `[![License: MIT](https://img.shields.io/apm/l/pack?style=plastic)]`
+    break;
+
+  default: None
+    break;
+}
 
 // function to write README file
 function writeToFile(fileName, data) {

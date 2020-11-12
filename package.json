@@ -1,18 +1,24 @@
 {
-  "name": "static-site",
-  // "name": "09-readme-generator",
+  "name": "09-readme-generator",
   "version": "1.0.0",
   "description": "",
-  // "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelleMcConville/09-readme-generator.git"
+  },
+  "keywords": [],
   "author": "",
-  // "author": "Michelle McConville",
-  "license": "ISC",
-  // "license": "MIT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichelleMcConville/09-readme-generator/issues"
+  },
+  "homepage": "https://github.com/MichelleMcConville/09-readme-generator#readme",
   "dependencies": {
-    "inquirer": "^6.5.2"  // Does this need to be updated to most current version of 7.3.3?
+    "axios": "^0.21.0",
+    "inquirer": "^7.3.3"
   }
 }
