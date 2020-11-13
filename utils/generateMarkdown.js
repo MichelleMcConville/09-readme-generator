@@ -45,8 +45,8 @@ ${usersAnswers.tests}
 
 ## Questions ❓
 
-* 📧 If you have any questions please [eMail](${usersAnswers.email}) me
-* :octocat: Check out more of my work on [GitHub](${usersAnswers.username})
+* 📧 If you have any questions please [**eMail**](${usersAnswers.email}) me
+* :octocat: Check out more of my work on [**GitHub**](${usersAnswers.username})
 
 ## Licence 📝
 

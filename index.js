@@ -37,7 +37,7 @@ const questions = [
   {
     message: "Choose the license that applies to the Project?",
     type: "list",
-    choices: ["Apache", "GNU", "ISC", "MIT", "None"],
+    choices: ["Apache", "CC", "GPLv3", "GPLv2", "ISC", "MIT", "WTFPL", "None"],
     name: "license",
   },
   {
