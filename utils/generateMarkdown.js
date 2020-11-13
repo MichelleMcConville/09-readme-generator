@@ -1,45 +1,56 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(usersAnswers) {
   return `
-# 🔗 [${data.project}}(${data.appURL})
+# [${usersAnswers.title}](${usersAnswers.repoURL}) 🔗
+
+
+
+${usersAnswers.license === "Apache" ? "![Badge](https://git.io/gradientbadge)" : 
+  usersAnswers.license === "GNU" ? "[![Badge](https://2m7dqaw1ofyq.runkit.sh)](https://git.io/gradientbadge)" : 
+  usersAnswers.license === "ISC" ? "[![Badge](https://2m7dqaw1ofyq.runkit.sh)](https://git.io/gradientbadge)" : 
+  usersAnswers.license === "MIT" ? "![Badge](https://git.io/gradientbadge)" : "None"}
 
 ## Description
-${data.description}
 
-## ✨ Table of Contents
+${usersAnswers.description}
+
+## Table of Contents ✨
+
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Contribution](#contribution)
-4. [Test](#test)
+3. [Contribution](#contributing)
+4. [Tests](#tests)
 5. [Questions](#questions)
 6. [License](#license)
 
-## 🛠️ Installation
-${data.install}
+## Installation 🛠️
 
-## Usage
-${data.usage}
+${usersAnswers.installation}
 
-## 📷 Application Screenshots
+## Usage 
 
-| ***Title***          | ***Title***          |
-| -------------------- | -------------------- |
-| ![TBD](./tbd)        | ![TBD](./tbd)        |
-| ***Title***          | ***Title***          |
-| ![TBD](./tbd)        | ![TBD](./tbd)        |
+${usersAnswers.usage}
 
-## 🤝 Contributing
-${data.contribution}
+## Contributing 🤝
 
-## ✅ Test
-${data.tests}
+${usersAnswers.contributing}
 
-## ❓ Questions
-* If you have any question you can contact me at ${data.email}.
-* Check out more of my work @[GitHub](${githubURL})! 🙂
+## Test ✅
 
-## Licence & Copyright
+${usersAnswers.tests}
 
+## Questions ❓
+
+* 📧 If you have any questions please [eMail](${usersAnswers.email}) me
+* :octocat: Check out more of my work on [GitHub](${usersAnswers.username})!
+
+## Licence
+
+This project is ${usersAnswers.license} licensed
+
+---
+
+ Copyright ©️ ${usersAnswers.year} ${usersAnswers.name}
 `;
 }
 
