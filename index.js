@@ -1,53 +1,59 @@
-// array of questions for user
-const fs = requirer("fs");
+const fs = require("fs");
 const inquirer = require("inquirer");
+const generateReadme = require("./utils/generateMarkdown");
+const axios = require("axios");
 
-// what is diff of inquirer.prompt([{}])
+const promptUser = () => {
+  return inquirer.prompt(questions)
+};
+
+// array of questions for user
 const questions = [
   {
-    message: "Enter the name of the Repo/Project?",
+    message: "Enter the Project title?",
     type: "input",
-    name: "project",
+    name: "title",
   },
   {
-    message: "What is the link to your application?",
+    message: "Enter the GitHub URL for the Project?",
     type: "input",
-    link: "appURL"
-  }
-  {
-    message: "Enter the Repo/Project GutHub URL?",
-    type: "input",
-    name: "githubURL",
+    name: "repoURL",
   },
   {
-    message: "Give a brief description of the Repo/Project?",
+    message: "Enter a brief Project description?",
     type: "input",
     name: "description",
   },
   {
-    message: "What does the user need to know about using the Repo/Project?",
+    message: "Enter how to install the Project?",
+    type: "input",
+    name: "installation",
+  },
+  {
+    message: "Enter how to use the Project?",
     type: "input",
     name: "usage",
   },
   {
-    message: "Enter the installation info for the Repo/Project?",
-    type: "input",
-    name: "install",
-  },
-//   {
-//     message: "Enter screenshot?",
-//     type: "",
-//     name: "",
-//   },
-  {
-    message: "What does the user need to know about contributing to the Repo/Project?",
-    type: "input",
-    name: "contribution",
+    message: "Choose the license that applies to the Project?",
+    type: "list",
+    choices: ["Apache", "CC", "GPLv3", "GPLv2", "ISC", "MIT", "WTFPL", "None"],
+    name: "license",
   },
   {
-    message: "Enter the test instructions?",
+    message: "What needs to be known about contributing to the Project?",
     type: "input",
-    name: "test",
+    name: "contributing",
+  },
+  {
+    message: "Enter any test instructions for the Project?",
+    type: "input",
+    name: "tests",
+  },
+  {
+    message: "Enter your GitHub Username?",
+    type: "input",
+    name: "username",
   },
   {
     message: "Enter your email address.",
@@ -55,49 +61,41 @@ const questions = [
     name: "email",
   },
   {
-    message: "Choose the license that applies to the Repo/Project?",
-    type: "list",
-    name: "license",
-    choices: ["Apache", "GNU", "ISC", "MIT", "None"],
-  },
-  {
     message: "What is the copyright year?",
     type: "input",
     name: "year",
   },
-//   {
-//     message: "?",
-//     type: "",
-//     name: "",
-//   },
+  {
+    message: "Type your full name?",
+    type: "input",
+    name: "name",
+  },
+// Format to use when adding more objects to the array
+// {
+//   message: "?",
+//   type: "",
+//   name: "",
+//},
 ];
 
-switch (data.license) {
-  case "Apache":
-    license = `[![License: Apache]()]`
-    break;
-  case "GNU":
-    license = `[![License: GNU]()]`
-    break;
-  case "ISC":
-    license = `[![License: ISC]()]`
-    break;
-  case "MIT":
-    license = `[![License: MIT](https://img.shields.io/apm/l/pack?style=plastic)]`
-    break;
-
-  default: None
-    break;
-}
-
 // function to write README file
-function writeToFile(fileName, data) {
-}
+function writeToFile(fileName, data) { 
+  fs.writeFile(fileName, data, (err) => {
+    if(err) throw err
+    console.log("You have successfully completed the README Generator!")
+  })
+};
 
 // function to initialize program
 function init() {
-
-}
+  promptUser().then(usersAnswers => {
+    axios.get("https://api.github.com/users/" + usersAnswers.username).then(results => {
+      usersAnswers.username = results.data.html_url;
+    const readmeContent = generateReadme(usersAnswers)
+      writeToFile("./README.md", readmeContent);
+    })
+  })
+};
 
 // function call to initialize program
 init();
