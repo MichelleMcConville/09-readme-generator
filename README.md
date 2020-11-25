@@ -22,34 +22,34 @@ A simple command line js application that will generate a formatted **`README.md
 * [Questions](#questions)
 * [Licence](#license)
 
-## Installation 🛠️
+## Installation 🛠️ <a name="installation"></a>
 
 ```node
 Type the following npm install commands one at a time:
 npm install -y, npm i inquirer, npm i axios, npm i gradient-badge
 ```
 
-## Usage ⚙️
+## Usage ⚙️ <a name="usage"></a>
 
 ```node
 Type the following command to run program:
 node index.js
 ```
 
-## Contributing 🤝
+## Contributing 🤝 <a name="contributing"></a>
 
 All contributions must be approved by owner
 
-## Tests ✅
+## Tests ✅ <a name="tests"></a>
 
 There are currently no testing procedures for this application
 
-## Questions ❓
+## Questions ❓ <a name="questions"></a>
 
 * 📧 If you have any questions please [**eMail**](mailto:dev.mchel@gmail.com) me
 * :octocat: Check out more of my work on [**GitHub**](https://github.com/MichelleMcConville)
 
-## Licence 📝
+## Licence 📝 <a name="license"></a>
 
 This project is **`Massachusetts Institute of Technology`** licensed
 
