@@ -3,9 +3,12 @@ function generateMarkdown(usersAnswers) {
   return `
 # [${usersAnswers.title}](${usersAnswers.repoURL}) 🔗
 
-[![Badge](https://crgn5f1s6bod.runkit.sh)](https://git.io/gradientbadge)	
-[![Badge](https://8nv6mv7znj9i.runkit.sh)](https://git.io/gradientbadge)	
-[![Badge](https://mlqa5dts7wqy.runkit.sh)](https://git.io/gradientbadge)	
+![Badge](https://crgn5f1s6bod.runkit.sh)
+![Badge](https://8nv6mv7znj9i.runkit.sh)
+![Badge](https://mlqa5dts7wqy.runkit.sh)
+![Badge](https://8nxhgwjcvhpi.runkit.sh)
+![Badge](https://4m9gn8h87520.runkit.sh)
+![Badge](https://s0acacxqwld3.runkit.sh)
 ${usersAnswers.license === "Apache" ? "![Badge](https://img.shields.io/badge/license-Apache%202.0-f56b02)" : 	
   usersAnswers.license === "CC"     ? "![Badge](https://img.shields.io/badge/license-CC-f2ea05)" : 	
   usersAnswers.license === "GPLv3"  ? "![Badge](https://img.shields.io/badge/license-GPL%20v3-40e637)" : 	
@@ -20,35 +23,35 @@ ${usersAnswers.description}
 
 ## Table of Contents ✨
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [contributing](#contributing)
-4. [Tests](#tests)
-5. [Questions](#questions)
-6. [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [License](#license)
 
-## Installation 🛠️
+## Installation 🛠️ <a name="installation"></a>
 
 ${usersAnswers.installation}
 
-## Usage ⚙️
+## Usage ⚙️ <a name="usage"></a>
 
 ${usersAnswers.usage}
 
-## Contributing 🤝
+## Contributing 🤝 <a name="contributing"></a>
 
 ${usersAnswers.contributing}
 
-## Test ✅
+## Tests ✅ <a name="tests"></a>
 
 ${usersAnswers.tests}
 
-## Questions ❓
+## Questions ❓ <a name="questions"></a>
 
-* 📧 If you have any questions please [**eMail**](${usersAnswers.email}) me
+* 📧 If you have any questions please [**eMail**](mailto:${usersAnswers.email}) me
 * :octocat: Check out more of my work on [**GitHub**](${usersAnswers.username})
 
-## Licence 📝
+## License 📝 <a name="license"></a>
 
 This project is ${usersAnswers.license === "Apache" ? "**`Apache 2.0`**" : 
                   usersAnswers.license === "CC"     ? "**`Creative Commons`**"  :  
@@ -60,7 +63,7 @@ This project is ${usersAnswers.license === "Apache" ? "**`Apache 2.0`**" :
 
 ---
 
- Copyright ©️ ${usersAnswers.year} ${usersAnswers.name}
+ Copyright ©️ ${usersAnswers.year} 🌷 ${usersAnswers.name}
 `;
 }
 
