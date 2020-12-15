@@ -1,8 +1,8 @@
 # [09-readme-generator](https://github.com/MichelleMcConville/09-readme-generator) 🔗
 
-![Badge](https://crgn5f1s6bod.runkit.sh)
-![Badge](https://8nv6mv7znj9i.runkit.sh)
-![Badge](https://mlqa5dts7wqy.runkit.sh)
+![Badge](https://wrqb7sgh3tvo.runkit.sh)
+![Badge](https://3q9qi05vkyq7.runkit.sh)
+![Badge](https://5j9no7y8fpmd.runkit.sh)
 ![Badge](https://img.shields.io/badge/license-MIT-f2056c)
 
 ## Description
