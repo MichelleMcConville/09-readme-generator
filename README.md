@@ -1,4 +1,4 @@
-# [09-readme-generator](https://github.com/MichelleMcConville/09-readme-generator) 🔗
+# [09-readme-generator](https://github.com/MichelleMcConville/09-readme-generator)
 
 ![Badge](https://wrqb7sgh3tvo.runkit.sh)
 ![Badge](https://3q9qi05vkyq7.runkit.sh)
