@@ -3,12 +3,6 @@ function generateMarkdown(usersAnswers) {
   return `
 # [${usersAnswers.title}](${usersAnswers.repoURL}) 🔗
 
-![Badge](https://crgn5f1s6bod.runkit.sh)
-![Badge](https://8nv6mv7znj9i.runkit.sh)
-![Badge](https://mlqa5dts7wqy.runkit.sh)
-![Badge](https://8nxhgwjcvhpi.runkit.sh)
-![Badge](https://4m9gn8h87520.runkit.sh)
-![Badge](https://s0acacxqwld3.runkit.sh)
 ${usersAnswers.license === "Apache" ? "![Badge](https://img.shields.io/badge/license-Apache%202.0-f56b02)" : 	
   usersAnswers.license === "CC"     ? "![Badge](https://img.shields.io/badge/license-CC-f2ea05)" : 	
   usersAnswers.license === "GPLv3"  ? "![Badge](https://img.shields.io/badge/license-GPL%20v3-40e637)" : 	
